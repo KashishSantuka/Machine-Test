@@ -5,7 +5,7 @@ import userModel from "./models/User.js";
 import User from "./models/User.js";
 import multer from "multer";
 import path from "path";
-import { Auth0Provider } from '@auth0/auth0-react';
+
 
 const app = express();
 app.use(express.json());
@@ -17,6 +17,7 @@ const corsOption = {
 };
 
 app.use(cors(corsOption));
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
